@@ -49,8 +49,8 @@ Browse environmental impact data for various food products. Data is sourced from
 # 1. Select the Metric to compare
 metric_cols = food_df.columns[1:] # All columns after 'Food_product' are metrics
 
-# We'll default to 'Total_emissions' if it exists, otherwise the first column
-default_metric = 'Total_emissions' if 'Total_emissions' in metric_cols else metric_cols[0]
+# We'll default to 'Total emissions' if it exists, otherwise the first column
+default_metric = 'Total emissions' if 'Total emissions' in metric_cols else metric_cols[0]
 default_index = list(metric_cols).index(default_metric) if default_metric in metric_cols else 0
 
 selected_metric = st.selectbox(
